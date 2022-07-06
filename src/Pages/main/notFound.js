@@ -1,5 +1,5 @@
-import logo from './Assets/logo.png';
-import video from './Assets/video.mp4';
+import logo from './assets/logo.png';
+import video from './assets/video.mp4';
 import styled from 'styled-components';
 
 const StyledApp = styled.div`

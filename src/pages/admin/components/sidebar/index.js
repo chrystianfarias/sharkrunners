@@ -8,6 +8,8 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import DashboardIcon from '@mui/icons-material/Dashboard';
 import EventIcon from '@mui/icons-material/Event';
+import NotificationsActiveIcon from '@mui/icons-material/NotificationsActive';
+import CheckIcon from '@mui/icons-material/Check';
 import { useNavigate } from "react-router-dom";
 
 const FixedSidebar = styled.div`
@@ -35,6 +37,18 @@ const Items = () => {
                         <EventIcon />
                     </ListItemIcon>
                     <ListItemText primary="Eventos" />
+                </ListItemButton>
+                <ListItemButton onClick={() => navigate("/admin/notificar")}>
+                    <ListItemIcon>
+                        <NotificationsActiveIcon />
+                    </ListItemIcon>
+                    <ListItemText primary="Notificar" />
+                </ListItemButton>
+                <ListItemButton onClick={() => navigate("/admin/checkin")}>
+                    <ListItemIcon>
+                        <CheckIcon />
+                    </ListItemIcon>
+                    <ListItemText primary="Fazer check-in" />
                 </ListItemButton>
             </List>
         </Box>

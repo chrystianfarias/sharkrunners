@@ -1,4 +1,4 @@
-import { AppBar, Toolbar, IconButton, Menu, MenuItem, Tooltip, Avatar} from '@mui/material';
+import { AppBar, Toolbar, IconButton, ButtonBase, Menu, MenuItem, Tooltip, Avatar} from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import styled from 'styled-components';
 import {useContext, useState} from 'react';
@@ -9,6 +9,25 @@ const MenuButton = styled.div`
     @media only screen and (min-width: 600px) {
         display: none;
     }
+`;
+const ProfileButton = styled.div`
+  border-radius: 5px;
+  overflow: hidden;
+  min-width: 120px;
+  height: 100%;
+  button {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    padding: 15px;
+    gap: 10px;
+    transition: background ease .2s;
+  }
+  &:hover {
+    button {
+      background: rgba(255,255,255,.1);
+    }
+  }
 `;
 const Header = ({onMenuClick}) => {
     const [anchorElUser, setAnchorElUser] = useState(null);
@@ -43,11 +62,17 @@ const Header = ({onMenuClick}) => {
             </MenuButton>
             Shark Runners - Dashboard
             <span style={{width: '100%'}}/>
-            <Tooltip title="Open settings">
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar sx={{ bgcolor: "#ff0000" }}>N</Avatar>
-              </IconButton>
+            <Tooltip title="Abrir configurações">
+              <ProfileButton>
+                <ButtonBase onClick={handleOpenUserMenu}>
+                    <Avatar sx={{ bgcolor: "#9b59b6" }}>
+                      {user.member.name.charAt(0).toUpperCase()}
+                    </Avatar>
+                    {user.member.name}
+                </ButtonBase>
+              </ProfileButton>
             </Tooltip>
+            
         </Toolbar>
         <Menu
           sx={{ mt: '45px' }}

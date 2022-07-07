@@ -16,7 +16,7 @@ import NotFoundPage from "./pages/main/notFound";
 
 //Admin
 import AdminEventsPage from "./pages/admin/events";
-import AdminNewEventPage from "./pages/admin/newEvent";
+import AdminNewEventPage from "./pages/admin/events/newEvent";
 import AdminMainPage from "./pages/admin/main";
 import LoginPage from "./pages/admin/login";
 

@@ -1,5 +1,5 @@
 import { Outlet } from "react-router-dom";
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import styled from 'styled-components';
 import Sidebar from "./components/sidebar";
 import Header from "./components/header";
@@ -31,11 +31,16 @@ const Container = styled.div`
     height: 100vh;
     background: ${props => props.theme.palette.background.paper};
     color: ${props => props.theme.palette.text.primary};
+    @media only screen and (max-width: 600px) {
+        background: ${props => props.theme.palette.background.default};
+    }
+    overflow: hidden;
 `;
 const Content = styled.div`
     display: flex;
     width: 100%;
     height: 100%;
+    overflow: hidden;
 `;
 
 const AdminPage = () => {

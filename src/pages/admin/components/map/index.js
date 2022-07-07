@@ -1,7 +1,7 @@
 import { MapContainer, TileLayer,  Marker, useMapEvents} from 'react-leaflet'
 
 const LocationFinderDummy = ({onClick}) => {
-    const map = useMapEvents({
+    useMapEvents({
         click(e) {
             if (e.latlng)
                 onClick(e.latlng.lat, e.latlng.lng);

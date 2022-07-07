@@ -10,7 +10,6 @@ import api from "../../../services/api";
 import axios from "axios";
 import Chat from "../components/chat";
 import Map from "../components/map";
-import PhotoCamera from '@mui/icons-material/PhotoCamera';
 
 const Container = styled.div`
     height: 100%;

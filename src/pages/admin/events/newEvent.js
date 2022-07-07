@@ -127,7 +127,7 @@ const NewEventPage = () => {
         }
         setMessage(`${nameStr}${dateStr}${localStr}${priceStr}`);
     }
-    useEffect(formatMessage, [newEvent]);
+    useEffect(formatMessage, [newEvent, locals]);
 
     const handleLocalDropDown = (event) => {
         const {value} = event.target;

@@ -63,6 +63,6 @@ jobs:
           app-name: 'sharkfront'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_3A42EE83AB954B548DD873A11EB407E9 }}
-          package: ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
+          package: .
       
       

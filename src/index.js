@@ -13,6 +13,7 @@ import {
 import MainPage from "./pages/main";
 import AdminPage from "./pages/admin";
 import NotFoundPage from "./pages/main/notFound";
+import PrivacityPage from "./pages/main/privacity";
 
 //Admin
 import AdminEventsPage from "./pages/admin/events";
@@ -31,6 +32,7 @@ root.render(
         <Route path="eventos/novo" element={<AdminNewEventPage />} />
       </Route>
       <Route path="login" element={<LoginPage />}/>
+      <Route path="politica_privacidade" element={<PrivacityPage />}/>
       <Route path="*" element={<NotFoundPage />}/>
     </Routes>
   </BrowserRouter>
